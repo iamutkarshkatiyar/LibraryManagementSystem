@@ -14,7 +14,15 @@ class main{
             choice = sc.nextInt();
             switch (choice){
                 case 1:
-                    System.out.println("book is adding");
+                    System.out.println("enter book id");
+                    int id=sc.nextInt();
+                    sc.nextLine();
+                    System.out.println("enter book Name");
+                    String book_name=sc.nextLine();
+                    System.out.println("enter book Author");
+                    String author=sc.nextLine();
+                    book book=new book(id,book_name,author);
+                    System.out.println("book is added");
                     break;
                 case 2:
                     System.out.println("book is viewing");
@@ -34,6 +42,6 @@ class main{
                 default:
                     System.out.println("Option Not available");
             }
-        }while(choice<=6);
+        }while(choice<6);
     }
     }
