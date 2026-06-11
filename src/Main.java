@@ -3,6 +3,7 @@ import java.util.Scanner;
 class main{
     static void main(String[] args) {
         int choice ;
+        Library library=new Library();
         do{
             System.out.println("1.Add book");
             System.out.println("2.View book");
@@ -21,11 +22,13 @@ class main{
                     String book_name=sc.nextLine();
                     System.out.println("enter book Author");
                     String author=sc.nextLine();
-                    book book=new book(id,book_name,author);
+                    Book book=new Book(id,book_name,author);
+                    library.addBook(book);
                     System.out.println("book is added");
                     break;
                 case 2:
-                    System.out.println("book is viewing");
+                    System.out.println("All Books In The Library");
+                    library.displayAllBooks();
                     break;
                 case 3:
                     System.out.println("Searching book");

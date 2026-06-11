@@ -1,8 +1,8 @@
-public class student {
+public class Student {
     int id;
     String name;
 
-    student(int id,String name){
+    Student(int id, String name){
         this.id=id;
         this.name=name;
     }
@@ -11,6 +11,6 @@ public class student {
     }
 
     static void main(String[] args) {
-        student s1=new student(1,"Utkarsh");
+        Student s1=new Student(1,"Utkarsh");
     }
 }
