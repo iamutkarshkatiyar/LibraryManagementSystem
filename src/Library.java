@@ -17,5 +17,20 @@ public class Library {
             }
         }
     }
+
+    public void searchBooks(int id){
+        if(books.isEmpty()){
+            System.out.println("no Book In the Library");
+        }else {
+        for (Book book:books) {
+            if (book.id == id) {
+                System.out.println("book found");
+            } else {
+                System.out.println("book not available");
+            }
+        }
+        }
+
+    }
     }
 

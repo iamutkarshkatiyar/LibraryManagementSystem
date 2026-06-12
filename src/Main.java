@@ -31,7 +31,9 @@ class main{
                     library.displayAllBooks();
                     break;
                 case 3:
-                    System.out.println("Searching book");
+                    System.out.println("Enter Book ID You Want To Search");
+                    int book_id= sc.nextInt();
+                    library.searchBooks(book_id);
                     break;
                 case 4:
                     System.out.println("issuing book");
