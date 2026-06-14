@@ -4,6 +4,10 @@ public class Book {
     String author;
     Boolean isBookIssued= false;
 
+    Book(){
+
+    }
+
     Book(int id, String book_name, String author ){
         this.id=id;
         this.book_name=book_name;
@@ -23,6 +27,8 @@ public class Book {
         }
 
     }
+
+
 
 
 }

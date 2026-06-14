@@ -24,7 +24,7 @@ class main{
                     String author=sc.nextLine();
                     Book book=new Book(id,book_name,author);
                     library.addBook(book);
-                    System.out.println("book is added");
+
                     break;
                 case 2:
                     System.out.println("All Books In The Library");
@@ -36,7 +36,10 @@ class main{
                     library.searchBooks(book_id);
                     break;
                 case 4:
-                    System.out.println("issuing book");
+                    System.out.println("enter book id");
+                    int issueId=sc.nextInt();
+                    library.issueBook(issueId);
+
                     break;
                 case 5:
                     System.out.println("return Book Succesfully");

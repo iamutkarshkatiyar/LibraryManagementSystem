@@ -2,6 +2,7 @@ import java.util.ArrayList;
 
 public class Library {
     public ArrayList<Book> books=new ArrayList<>();
+    Book book=new Book();
 
     public void addBook(Book book){
         books.add(book);
@@ -32,5 +33,23 @@ public class Library {
         }
 
     }
-    }
+
+            void issueBook(int id) {
+                if (book.id == id) {
+                    if (book.isBookIssued == true) {
+                        System.out.println("Book Already issued");
+
+                        if (book.isBookIssued == false) {
+                            book.isBookIssued = true;
+                            System.out.println("book issued sucessfully");
+                        }
+                    }
+                } else {
+                    System.out.println("provide a valid id");
+                }
+            }
+        }
+
+
+
 
