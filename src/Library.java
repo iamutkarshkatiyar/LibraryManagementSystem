@@ -34,17 +34,23 @@ public class Library {
 
     }
 
-            void issueBook(int id) {
-                if (book.id == id) {
-                    if (book.isBookIssued == true) {
-                        System.out.println("Book Already issued");
+            void issueBook(int issueId) {
+                    boolean found =false;
+                    for(Book book:books) {
+                        if (book.id == issueId) {
+                            found = true;
+                            if (book.isBookIssued) {
+                                System.out.println("Book Already issued");
+                            } else {
+                                book.isBookIssued = true;
+                                System.out.println("book issued sucessfully");
+                            }
+                            break;
 
-                        if (book.isBookIssued == false) {
-                            book.isBookIssued = true;
-                            System.out.println("book issued sucessfully");
                         }
                     }
-                } else {
+
+                 if (found==false){
                     System.out.println("provide a valid id");
                 }
             }
