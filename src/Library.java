@@ -49,12 +49,32 @@ public class Library {
 
                         }
                     }
-
                  if (found==false){
                     System.out.println("provide a valid id");
                 }
             }
+
+    void return_book(int returnId){
+        boolean bFound =false;
+        for(Book book:books){
+            if (book.id==returnId){
+                bFound=true;
+                book.isBookIssued=false;
+                System.out.println("book return sucessfully");
+            }else {
+                System.out.println("no book found");
+            }
+
+        }if (bFound==false){
+            System.out.println("please provide valid id");
         }
+
+
+
+    }
+        }
+
+
 
 
 

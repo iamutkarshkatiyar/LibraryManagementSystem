@@ -42,7 +42,9 @@ class main{
 
                     break;
                 case 5:
-                    System.out.println("return Book Succesfully");
+                    System.out.println("enter book id");
+                    int returnId=sc.nextInt();
+                    library.return_book(returnId);
                     break;
                 case 6:
                     System.out.println("exiting the system");
